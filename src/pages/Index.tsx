@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,6 +16,7 @@ import {
 } from "lucide-react";
 import AgentDashboard from "./AgentDashboard";
 import ClientDashboard from "./ClientDashboard";
+import { Chatbot } from "@/components/chat/Chatbot";
 
 const Index = () => {
   const [currentView, setCurrentView] = useState<'landing' | 'agent' | 'client'>('landing');
@@ -252,6 +252,9 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      {/* Chatbot Integration */}
+      <Chatbot />
     </div>
   );
 };
